@@ -26,7 +26,7 @@
 
         <div class="navCategorie" id="navCategorie">
 
-            <div class="buttonCta" id="bottoneHome">
+            <div class="buttonCta" id="bottoneHome" onclick="apriHomePage()">
                 <h6 class="home-testo"><i class="bi bi-house-fill" style="margin-right: 5px;"></i>Home</h6>
             </div>
 
@@ -44,7 +44,7 @@
             </div>
 
 
-            <div class="searchButton" id="search">
+            <div class="searchButton" id="search" onclick="apriSezioneCerca()">
                 <i class="bi bi-search"></i>
             </div>
 
@@ -52,6 +52,11 @@
 
 
     </nav>
+
+
+    <div class="inputSearch" id="inputSearch">
+        <input class="input" type="text" placeholder="Search...">
+    </div>
 
     <div style="display: flex;align-items: center;justify-content:center ;">
         <div class="presentation">

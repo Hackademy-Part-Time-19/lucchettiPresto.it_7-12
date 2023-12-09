@@ -1,7 +1,7 @@
 let listaImmagini = ["./image/skincare.jpg", "./image/abbigliamento.webp", "./image/telefonia.jpg"]
 let index = 0
 let img = document.getElementById("presentationImage")
-let presentationP=[""]
+let presentationP = [""]
 
 
 
@@ -33,7 +33,7 @@ async function cicloImmagine() {
     img.src = listaImmagini[index++ % listaImmagini.length];
     await settaStyle([...parametriImmagini])
 
-    
+
     cicloImmagine()
 }
 
@@ -51,7 +51,7 @@ let parametriImmagini = [{
     opacita: 0
 }]
 
-async function settaStyle( oggetti) {
+async function settaStyle(oggetti) {
     const oggetto = oggetti.shift()
     if (oggetto == undefined) {
         return;
@@ -69,22 +69,43 @@ cicloImmagine()
 
 
 
-let prodotti=[
-   
+let prodotti = [
+
 ]
 
 function filtraPerPrezzo() {
 
-    let nome=document.getElementById("titleProduct")
-    let prezzo= document.getElementById("priceProduct")
+    let nome = document.getElementById("titleProduct")
+    let prezzo = document.getElementById("priceProduct")
 
-    let OggettiProdototti=[
-        { 
-            nomeProdotto:nome,
-            prezzoProdotto:prezzo,
+    let OggettiProdototti = [
+        {
+            nomeProdotto: nome,
+            prezzoProdotto: prezzo,
             nomeDaFiltrare: nomeProdotto.toLowerCase()
-        }, 
+        },
     ]
 
-    prodotti= prodotti.push(OggettiProdototti)
+    prodotti = prodotti.push(OggettiProdototti)
+}
+
+
+function apriHomePage() {
+
+    window.location.href = "landingPage.html"
+
+}
+
+let inputAttivo = true
+function apriSezioneCerca() {
+    
+    if (inputAttivo == true) {
+        document.getElementById("inputSearch").style = "visibility:visible"
+        inputAttivo=false
+    }else{
+        document.getElementById("inputSearch").style = "visibility:hidden"
+        inputAttivo=true
+    }
+    
+    
 }
