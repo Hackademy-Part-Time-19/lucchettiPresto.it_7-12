@@ -14,6 +14,59 @@ h1 {
 }
 
 
+@media screen and (max-width: 800px) {
+
+
+    .navCategorie {
+
+        display: none;
+
+
+    }
+
+    #bottoneHome {
+        display: none;
+    }
+
+    #bottoneCategorie {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+
+
+    .navCategorie {
+
+        display: none;
+
+
+    }
+
+    #bottoneHome {
+        display: none;
+    }
+
+    #bottoneCategorie {
+        display: none;
+    }
+
+
+
+    .button-compra {
+
+        padding-top: 5px;
+
+    }
+
+
+
+}
+
 /* SEZIONE BARRA DI NAVIGAZIONE   */
 
 .barraDiNavigazione {
@@ -35,7 +88,7 @@ h1 {
     justify-content: center;
     padding-left: 15px;
     flex: 1;
-    
+
 
 }
 
@@ -70,7 +123,7 @@ h1 {
     width: 70%;
     margin-top: 100px;
     margin-bottom: 50px;
-    
+
     position: relative;
 }
 
@@ -113,7 +166,7 @@ h1 {
     object-fit: cover;
     transition: ease-in 0.3s;
     display: none;
-   
+
 }
 
 
@@ -121,6 +174,19 @@ h1 {
 
 
 /*    ||||   SEZIONE PRODOTTI   ||||   */
+
+
+
+.testo-centrale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    width: 100%;
+}
+
+
 
 .divCatalogo {
     margin-top: 50px;
@@ -205,7 +271,9 @@ h1 {
 .buttonCta {
     border-bottom: 4px solid white;
     color: aliceblue;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 25px;
     width: 180px;
     text-align: center;
@@ -260,7 +328,9 @@ h1 {
 .searchButton {
     border-bottom: 4px solid white;
     color: aliceblue;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 25px;
     width: 50px;
     text-align: center;
@@ -274,4 +344,43 @@ h1 {
 
     scale: 1.03;
 
+}
+
+
+/* SEZIONE BOTTONI FILTRA E ORDINA    */
+
+.sezioneBottoniFiltra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.buttonFilterPrezzo {
+    width: 100px;
+    height: 40px;
+    background-color: #DA0037;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.buttonFilterNome {
+    width: 100px;
+    height: 40px;
+    background-color: #DA0037;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
 }

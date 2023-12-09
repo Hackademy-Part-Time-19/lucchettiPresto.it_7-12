@@ -75,8 +75,8 @@ let prodotti=[
 
 function filtraPerPrezzo() {
 
-    let nome="Crema Skincare"
-    let prezzo= "€100,00"
+    let nome=document.getElementById("titleProduct")
+    let prezzo= document.getElementById("priceProduct")
 
     let OggettiProdototti=[
         { 
