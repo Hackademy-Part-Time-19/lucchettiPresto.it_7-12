@@ -3,7 +3,7 @@ let presentationP = [""]
 let img = document.getElementById("presentationImage");
 let index = 0
 
-/*
+
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
@@ -46,7 +46,7 @@ async function settaStyle(oggetti) {
 
 cicloImmagine()
 
-*/
+
 
 
 
