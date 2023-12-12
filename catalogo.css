@@ -78,7 +78,7 @@ h1 {
     top: 0px;
     box-shadow: 0px 5px 11px 0px #DA0037;
     z-index: 100000;
-
+    
 }
 
 
@@ -88,7 +88,9 @@ h1 {
     justify-content: center;
     padding-left: 15px;
     flex: 1;
-
+    cursor: pointer;
+    margin-top: 13px;
+    
 
 }
 
@@ -107,65 +109,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-
-/* Sezione centrale */
-
-.presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #171717;
-    text-align: center;
-    height: 55vh;
-    width: 70%;
-    margin-top: 100px;
-    margin-bottom: 50px;
-
-    position: relative;
-}
-
-
-.presentationText {
-
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: white;
-    font-size: 26px;
-    flex-direction: column;
-    text-align: center;
-    z-index: 1000;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-    font-weight: 100;
-}
-
-.imageContainer {
-    flex: 4;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-
-
-.imgPresentation {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: ease-in 0.3s;
-    display: none;
 
 }
 
@@ -193,13 +136,19 @@ h1 {
 
 }
 
+.container-card{
+    padding:10px;
+    margin-top: 20px;
+}
+
 .card-prodotto {
-    height: 60vh;
-    border: 10px solid #171717;
+    height: 50vh;
+    
     background-color: #505050;
     border-radius: 30px;
     padding: unset !important;
     position: relative;
+   
 
 
 }
@@ -208,31 +157,38 @@ h1 {
     height: 50%;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    
 }
 
 
 
 .container-testo-prodotto {
-    height: 100px;
-    margin-top: 55px;
-    font-size: 24px;
-    margin-left: 20px;
+    height: 110px;
+    margin-top: 15px;
+    font-size: 18px;
+    margin-left: 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 
 .img-prodotto {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    border: 3px solid black
+    
 }
 
 
 .container-button-prodotto {
-    height: 100px;
+    height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -250,6 +206,8 @@ h1 {
     align-items: center;
     justify-content: center;
     padding-top: 13px;
+    cursor:pointer;
+    
 
 }
 

@@ -1,7 +1,7 @@
-let listaImmagini = ["./image/skincare.jpg", "./image/abbigliamento.webp", "./image/telefonia.jpg"]
-let index = 0
-let img = document.getElementById("presentationImage")
-let presentationP = [""]
+
+
+
+
 
 
 
@@ -23,48 +23,6 @@ setInterval(function () {
 }, 3500)*/
 
 
-
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-}
-
-async function cicloImmagine() {
-
-    img.src = listaImmagini[index++ % listaImmagini.length];
-    await settaStyle([...parametriImmagini])
-
-
-    cicloImmagine()
-}
-
-let parametriImmagini = [{
-    ritardo: 500,
-    opacita: 0,
-
-},
-{
-    ritardo: 1000,
-    opacita: 0.8
-},
-{
-    ritardo: 2000,
-    opacita: 0
-}]
-
-async function settaStyle(oggetti) {
-    const oggetto = oggetti.shift()
-    if (oggetto == undefined) {
-        return;
-    };
-    img.style = `opacity:${oggetto.opacita}; display:block`;
-    await delay(oggetto.ritardo)
-    return settaStyle(oggetti)
-
-
-}
-
-
-cicloImmagine()
 
 
 
@@ -98,14 +56,63 @@ function apriHomePage() {
 
 let inputAttivo = true
 function apriSezioneCerca() {
-    
+
     if (inputAttivo == true) {
         document.getElementById("inputSearch").style = "visibility:visible"
-        inputAttivo=false
-    }else{
+        inputAttivo = false
+    } else {
         document.getElementById("inputSearch").style = "visibility:hidden"
-        inputAttivo=true
+        inputAttivo = true
     }
-    
-    
+
+
 }
+
+/*||||||||||  SEZIONE FETCH CON FUNZIONE PER PRODOTTI ||||||||||     */
+function aggiungiProdotti(limiteInferiore, limiteSuperiore, filtroCategoria, filtroNome) {
+
+    fetch("https://fakestoreapi.com/products")
+        .then((response) => { return response.json() })
+        .then(data => {
+            data = data.filter(function (prodotto) {
+                return prodotto.category == filtroCategoria && prodotto.title.startsWith(filtroNome)
+                    && prodotto.price >= limiteInferiore && prodotto.price <= limiteSuperiore
+            })
+            for (let i = 0; i < data.length; i++) {
+
+
+                let prezzo = data[i].price;
+                let titolo = data[i].title;
+                let immagine = data[i].image;
+                let descrizione = data[i].description;
+
+
+                document.getElementById("divCatalogo").innerHTML += ` <div class="container-card col-12 col-sm-4 col-md-3 " id="prodotto">
+                                                                        <div class="card-prodotto">
+                                                                            <div class="container-immagine-prodotto">
+                                                                                <img class="img-prodotto" src="${immagine}">
+                                                                            </div>
+                                                                            <div class="container-testo-prodotto">
+                                                                                <p id="titleProduct">${titolo}</p>
+
+                                                                                <p id="priceProduct">€${prezzo}</p>
+                                                                            </div>
+
+                                                                            <div class="container-button-prodotto">
+                                                                                <div class="button-compra">
+                                                                                <p> Acquista</p>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                      </div>`
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
+}
+
+
+aggiungiProdotti()

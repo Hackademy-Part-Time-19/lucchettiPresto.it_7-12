@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalogo || Presto.it</title>
     <script src="catalogo.js" defer></script>
+    <script src="landingPage.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="catalogo.css">
@@ -15,7 +16,7 @@
 
 <body>
     <nav class="container-fluid barraDiNavigazione" id="navBar">
-        <div class="logo" id="logoInterattivo">
+        <div class="logo" id="logoInterattivo" onclick="apriHomePage()">
 
             <h1 class="logo-testo"
                 style="font-weight: 700; font-size: 40px; color: white;text-shadow: 2px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);">
@@ -24,14 +25,16 @@
         </div>
 
 
-        <div class="navCategorie" id="navCategorie">
+        <div class="navCategorie container-fluid" id="navCategorie">
 
             <div class="buttonCta" id="bottoneHome" onclick="apriHomePage()">
                 <h6 class="home-testo"><i class="bi bi-house-fill" style="margin-right: 5px;"></i>Home</h6>
+                
             </div>
 
             <div class="buttonCta" id="bottoneCategorie">
                 <h6 class="categorie-testo"><i class="bi bi-book" style="margin-right: 5px;"></i>Categorie</h6>
+                
             </div>
 
 
@@ -58,27 +61,9 @@
         <input class="input" type="text" placeholder="Search...">
     </div>
 
-    <div style="display: flex;align-items: center;justify-content:center ;">
-        <div class="presentation">
+    
 
 
-
-
-            <div class="imageContainer">
-                <img class="imgPresentation" id="presentationImage">
-            </div>
-
-
-            <div class="presentationText">
-                <p> Per ordini superiori ai €50 la spedizione e' gratis!</p>
-                <p> Consegna stimata in 24/48h!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid testo-centrale">
-        <p> I nostri prodotti selezionati esclusivamente per voi!</p>
-    </div>
 
 
     <div class="sezioneBottoniFiltra">
@@ -90,6 +75,9 @@
         </div>
     </div>
 
+    <div class="container-fluid testo-centrale">
+        <p> Your results...</p>
+    </div>
 
     <div class="container-fluid sezioneProdotti" id="sezioneProdotti">
 
@@ -97,93 +85,6 @@
         <div class="divCatalogo row " id="divCatalogo">
 
 
-
-
-            <div class="card-prodotto col-12 col-sm-4" id="prodotto">
-                <div class="container-immagine-prodotto">
-                    <img class="img-prodotto" src="./image/skincare.jpg">
-                </div>
-                <div class="container-testo-prodotto">
-                    <p id="titleProduct"> Crema skincare </p>
-
-                    <p id="priceProduct"> €100,00 </p>
-                </div>
-
-                <div class="container-button-prodotto">
-                    <div class="button-compra">
-                        <p> Acquista</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-prodotto col-12 col-sm-4" id="prodotto">
-                <div class="container-immagine-prodotto">
-                    <img class="img-prodotto" src="./image/skincare.jpg">
-                </div>
-                <div class="container-testo-prodotto">
-                    <p id="titleProduct"> Crema skincare </p>
-
-                    <p id="priceProduct"> €100,00 </p>
-                </div>
-
-                <div class="container-button-prodotto">
-                    <div class="button-compra">
-                        <p> Acquista</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-prodotto col-12 col-sm-4" id="prodotto">
-                <div class="container-immagine-prodotto">
-                    <img class="img-prodotto" src="./image/skincare.jpg">
-                </div>
-                <div class="container-testo-prodotto">
-                    <p id="titleProduct"> Crema skincare </p>
-
-                    <p id="priceProduct"> €100,00 </p>
-                </div>
-
-                <div class="container-button-prodotto">
-                    <div class="button-compra">
-                        <p> Acquista</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-prodotto col-12 col-sm-4" id="prodotto">
-                <div class="container-immagine-prodotto">
-                    <img class="img-prodotto" src="./image/skincare.jpg">
-                </div>
-                <div class="container-testo-prodotto">
-                    <p id="titleProduct"> Crema skincare </p>
-
-                    <p id="priceProduct"> €100,00 </p>
-                </div>
-
-                <div class="container-button-prodotto">
-                    <div class="button-compra">
-                        <p> Acquista</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-prodotto col-12 col-sm-4" id="prodotto">
-                <div class="container-immagine-prodotto">
-                    <img class="img-prodotto" src="./image/skincare.jpg">
-                </div>
-                <div class="container-testo-prodotto">
-                    <p id="titleProduct"> Crema skincare </p>
-
-                    <p id="priceProduct"> €100,00 </p>
-                </div>
-
-                <div class="container-button-prodotto">
-                    <div class="button-compra">
-                        <p> Acquista</p>
-                    </div>
-                </div>
-
-            </div>
 
 
         </div>

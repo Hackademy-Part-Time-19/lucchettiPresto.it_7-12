@@ -1,0 +1,380 @@
+* {
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #171717;
+}
+
+
+h1 {
+    font-weight: 900;
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+    .navCategorie {
+
+        display: none;
+
+
+    }
+
+    #bottoneHome {
+        display: none;
+    }
+
+    #bottoneCategorie {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+
+
+    .navCategorie {
+
+        display: none;
+
+
+    }
+
+    #bottoneHome {
+        display: none;
+    }
+
+    #bottoneCategorie {
+        display: none;
+    }
+
+
+
+    .button-compra {
+
+        padding-top: 5px;
+
+    }
+
+
+
+}
+
+
+
+/* |||| SEZIONE BARRA DI NAVIGAZIONE  |||| */
+
+.barraDiNavigazione {
+    width: 100%;
+    display: flex;
+    background-color: rgba(218, 0, 55, 0.7);
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0px 5px 11px 0px #DA0037;
+    z-index: 100000;
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    flex: 1;
+    cursor: pointer;
+    margin-top: 13px;
+
+
+}
+
+
+.navCategorie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+
+
+}
+
+.userSearch {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* SEZIONE PULSANTI   */
+
+
+
+
+/* pulsante generale   */
+
+
+
+.buttonCta {
+    border-bottom: 4px solid white;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    width: 180px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+
+}
+
+.buttonCta:hover {
+    scale: 1.03;
+
+}
+
+
+
+
+
+/* pulsante userNavbar   */
+
+
+
+
+.userButton {
+    border-bottom: 4px solid white;
+    color: aliceblue;
+    display: flex;
+    height: 33px;
+    width: 50px;
+
+    font-size: 25px;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.userButton:hover {
+
+    scale: 1.05;
+}
+
+
+
+
+
+/* pulsante searchNavbar e INPUTSEARCH   */
+
+
+
+
+
+.searchButton {
+    border-bottom: 4px solid white;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    height: 33px;
+    width: 50px;
+    font-size: 20px;
+    text-align: center;
+
+    cursor: pointer;
+    transition: ease-in 0.2s;
+
+}
+
+.searchButton:hover {
+
+    scale: 1.05;
+
+}
+
+.inputSearch {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 68px;
+    padding-right: 20px;
+    visibility: hidden;
+
+}
+
+
+.input {
+    background-color: #303030;
+    outline: none;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+
+/* Sezione centrale */
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
+    text-align: center;
+    height: 55vh;
+    width: 70%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+
+.presentationText {
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-size: 26px;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+    font-weight: 100;
+}
+
+.imageContainer {
+    flex: 4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.imgPresentation {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: ease-in 0.3s;
+    display: none;
+
+}
+
+/* |||| SEZIONE BOTTONI DI FILTRAGGIO|||| */
+
+
+.container-bottoni {
+    background-color: rgba(23, 23, 23, 0.7);
+    text-align: center;
+
+    padding-top: 50px;
+
+}
+
+
+.bottoni {
+    margin-top: 50px;
+}
+
+.buttonFiltri {
+    height: 200px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgba(218, 0, 55, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px;
+    
+}
+
+
+
+
+.selezionePrezzo {
+    width: 60%;
+    height: 40px;
+    color: white;
+    background-color: #303030;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.selezioneCategoria {
+    width: 60%;
+    height: 40px;
+    color: white;
+    background-color: #303030;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inputNome{
+    width: 60%;
+    height: 40px;
+    background-color:#303030;
+    color: aliceblue;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.textFiltri{
+    font-size: 20px;
+}
+
+.buttonRicerca {
+    height: 200px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgba(39, 39, 39, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px;
+    transition: ease-in 0.3s;
+    cursor: pointer;
+}
+
+.buttonRicerca:hover{
+    scale:1.05;
+    background-color: #DA0037;
+    
+}
