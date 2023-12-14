@@ -256,7 +256,7 @@ h1 {
     justify-content: center;
     height: 100%;
     color: white;
-    font-size: 26px;
+    font-size: 46px;
     flex-direction: column;
     text-align: center;
     z-index: 1000;
@@ -397,7 +397,7 @@ h1 {
 
 .finestraCategoria {
     height: 80vh;
-    background-color: rgba(218, 0, 55, 0.7);
+    background-color: #303030;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,7 +408,7 @@ h1 {
 }
 
 .finestraCategoria:hover{
-    background-color: #303030;
+    background-color: rgba(218, 0, 55, 0.7);
     border-radius:25px;
 }
 
@@ -417,7 +417,7 @@ h1 {
     height: 85%;
     width: 80%;
     object-fit: cover;
-    
+    filter:grayscale(1);
     
     transition: ease-in-out 0.7s;
     

@@ -201,11 +201,14 @@ window.addEventListener("load", (event) => {
 
 
 function bordiImmagine(numeroImmagine){
-    document.getElementById(`imgCategoria${numeroImmagine}`).style="border-radius:25px"
+    document.getElementById(`imgCategoria${numeroImmagine}`).style="border-radius:25px;filter:grayscale(0);"
+   
+
 }
 
 function bordiImmagineNone(numeroImmagine){
-    document.getElementById(`imgCategoria${numeroImmagine}`).style="border-radius:0px"
+    document.getElementById(`imgCategoria${numeroImmagine}`).style="border-radius:0px;filter:grayscale(1);"
+  
 }
 
 
