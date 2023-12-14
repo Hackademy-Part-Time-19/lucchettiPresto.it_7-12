@@ -63,24 +63,25 @@
 
 
     <div class="container-bottoni">
-        <h3 style="font-size: 45px; font-weight: 400; ">INIZIA DA QUI A CERCARE IL TUO STILE</h3>
+        <h3 style="font-size: 45px; font-weight: 400;font-size: 54px; text-shadow: rgba(253, 253, 253,0.8) 2px 0 10px;">
+            INIZIA DA QUI A CERCARE IL TUO STILE</h3>
 
         <div class="row bottoni">
 
-            <div  class="col-12 col-lg-3 p-4">
-                <div class="buttonFiltri" >
+            <div class="col-12 col-lg-3 p-4">
+                <div class="buttonFiltri">
                     <h3 class="textFiltri">FILTRA PER PREZZO</h3>
                     <select class="selezionePrezzo" id="bottonePrezzo">
                         <option value="0-100">0-100€</option>
                         <option value="100-250">100-250€</option>
                         <option value="250-500">250-500€</option>
-                        <option value="500 >">500€ ></option>
+                        <option value="500">500€ ></option>
                     </select>
                 </div>
             </div>
 
-            <div  class="col-12 col-lg-3 p-4">
-                <div class="buttonFiltri" >
+            <div class="col-12 col-lg-3 p-4">
+                <div class="buttonFiltri">
                     <h3 class="textFiltri">CATEGORIE</h3>
                     <select class="selezioneCategoria" id="bottoneCategoria">
                         <option value="electronics">Elettronica</option>
@@ -91,13 +92,13 @@
                 </div>
             </div>
 
-            <div  class="col-12 col-lg-3 p-4">
+            <div class="col-12 col-lg-3 p-4">
                 <div class="buttonFiltri">
                     <h3 class="textFiltri">FILTRA PER NOME</h3>
                     <input class="inputNome" id="inputNome" placeholder="Nome oggetto">
                 </div>
             </div>
-            <div  class="col-12 col-lg-3 p-4">
+            <div class="col-12 col-lg-3 p-4">
                 <div class="buttonRicerca" onclick="filtraCatalogo()">
                     <h3>CERCA</h3>
                 </div>
@@ -106,9 +107,79 @@
         </div>
     </div>
 
+    <div class="text-center" style="margin-top: 150px;">
+        <h2 style="font-size: 54px; text-shadow: rgba(253, 253, 253,0.8) 2px 0 10px;">Le migliori marche sul mercato,
+            per Te!</h2>
+    </div>
+
+    <div class="row categorieCatalogo">
+
+        <div class="col-12 col-md-6 p-3">
+            <div class="finestraCategoria" onmouseover="bordiImmagine(1)" onmouseleave="bordiImmagineNone(1)"
+                onclick="apriCatalogoCategoria('electronics')">
+                <div class="divTextCategoria">
+                    <h3 class="textCategoria">Scopri il nostro fantastico reparto di elettronica, solo il meglio per Te!
+                    </h3>
+                </div>
+
+                <img src="./image/elettronica.webp" alt="Reparto Elettronica" class="imgCategoria" id="imgCategoria1">
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-6 p-3">
+
+            <div class="finestraCategoria" onmouseover="bordiImmagine(2)" onmouseleave="bordiImmagineNone(2)"
+                onclick="apriCatalogoCategoria('jewelery')">
+                <div class="divTextCategoria">
+                    <h3 class="textCategoria">Le nostre gemme, i nostri diamanti, unici e lavorati a mano con stile!
+                    </h3>
+                </div>
+
+                <img src="./image/Gioielli.webp" alt="Reparto Gioielleria" class="imgCategoria" id="imgCategoria2">
+
+            </div>
+
+
+        </div>
+
+        <div class="col-12 col-md-6 p-3">
+
+            <div class="finestraCategoria" onmouseover="bordiImmagine(3)" onmouseleave="bordiImmagineNone(3)"
+                onclick="apriCatalogoCategoria(`men's clothing`)">
+                <div class="divTextCategoria">
+                    <h3 class="textCategoria">Le migliori marche per uomini tenaci e intraprendenti
+                    </h3>
+                </div>
+
+                <img src="./image/abbigliamentoUomo.jpg" alt="Reparto Uomo" class="imgCategoria" id="imgCategoria3">
+
+            </div>
+
+
+        </div>
+
+        <div class="col-12 col-md-6 p-3">
+
+            <div class="finestraCategoria" onmouseover="bordiImmagine(4)" onmouseleave="bordiImmagineNone(4)"
+                onclick="apriCatalogoCategoria(`women's clothing`)">
+                <div class="divTextCategoria">
+                    <h3 class="textCategoria">La nostra scelta di vestiario per Lei che e' unica in tutto e per tutto!
+                    </h3>
+                </div>
+
+                <img src="./image/abbigliamentoDonna.jpeg" alt="Reparto Donna" class="imgCategoria" id="imgCategoria4">
+
+            </div>
+
+
+        </div>
+    </div>
+
 
     <script src="landingPage.js" defer></script>
-    <script src="catalogo.js" defer></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

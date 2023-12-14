@@ -1,32 +1,5 @@
 
 
-
-
-
-
-
-
-/*
-setInterval(function () {
-
-
-    img.src = listaImmagini[index];
-    document.getElementById("presentationImage").style = "opacity:0;display:block ";
-    setTimeout(() => { document.getElementById("presentationImage").style = "opacity:1;display:block " }, 1000);
-    setTimeout(() => { document.getElementById("presentationImage").style = "opacity:0;display:block " }, 3000)
-
-
-
-    index > 1 ? index = 0 : index++;
-
-
-}, 3500)*/
-
-
-
-
-
-
 let prodotti = [
 
 ]
@@ -36,7 +9,7 @@ function filtraPerPrezzo() {
     let nome = document.getElementById("titleProduct")
     let prezzo = document.getElementById("priceProduct")
 
-    let OggettiProdototti = [
+    let OggettiProdotti = [
         {
             nomeProdotto: nome,
             prezzoProdotto: prezzo,
@@ -44,7 +17,7 @@ function filtraPerPrezzo() {
         },
     ]
 
-    prodotti = prodotti.push(OggettiProdototti)
+    prodotti = prodotti.push(OggettiProdotti)
 }
 
 
@@ -74,20 +47,34 @@ function aggiungiProdotti(limiteInferiore, limiteSuperiore, filtroCategoria, fil
     fetch("https://fakestoreapi.com/products")
         .then((response) => { return response.json() })
         .then(data => {
-            data = data.filter(function (prodotto) {
-                return prodotto.category == filtroCategoria && prodotto.title.startsWith(filtroNome)
-                    && prodotto.price >= limiteInferiore && prodotto.price <= limiteSuperiore
+
+            let prodotti = data.filter((prodotto) => {
+
+                if (limiteSuperiore != undefined && filtroNome != "" && filtroCategoria != "") {
+                    return prodotto.price >= limiteInferiore && prodotto.price < limiteSuperiore && prodotto.title.startsWith(filtroNome) && prodotto.category == filtroCategoria;
+                } else if (limiteSuperiore == undefined && (filtroNome != "" && filtroNome != undefined) && filtroCategoria != "") {
+                    return prodotto.price >= limiteInferiore && prodotto.title.startsWith(filtroNome) && prodotto.category == filtroCategoria;
+                } else if (limiteSuperiore == undefined && filtroNome == "" && filtroCategoria != "") {
+                    return prodotto.price >= limiteInferiore && prodotto.category == filtroCategoria;
+                } else if (limiteSuperiore == undefined && filtroNome != "" && filtroCategoria == "") {
+                    return prodotto.price >= limiteInferiore && prodotto.title.startsWith(filtroNome);
+                } else if (limiteSuperiore != undefined && filtroNome =="" && filtroCategoria!= ""){
+                    return prodotto.price >= limiteInferiore && prodotto.price < limiteSuperiore && prodotto.category == filtroCategoria
+                } else if (filtroCategoria!= "" && filtroCategoria!= undefined){
+                    return prodotto.category == filtroCategoria
+                }
             })
-            for (let i = 0; i < data.length; i++) {
 
+            for (let i = 0; i < prodotti.length; i++) {
+                let prodotto= prodotti[i];
 
-                let prezzo = data[i].price;
-                let titolo = data[i].title;
-                let immagine = data[i].image;
-                let descrizione = data[i].description;
+                let prezzo = prodotto.price;
+                let titolo = prodotto.title;
+                let immagine = prodotto.image;
+                let descrizione = prodotto.description;
 
-
-                document.getElementById("divCatalogo").innerHTML += ` <div class="container-card col-12 col-sm-4 col-md-3 " id="prodotto">
+                console.log(prezzo,titolo,immagine)
+                document.getElementById("divCatalogo").innerHTML += ` <div class="container-card col-12 col-sm-4 col-xl-3 " id="prodotto">
                                                                         <div class="card-prodotto">
                                                                             <div class="container-immagine-prodotto">
                                                                                 <img class="img-prodotto" src="${immagine}">
@@ -115,4 +102,3 @@ function aggiungiProdotti(limiteInferiore, limiteSuperiore, filtroCategoria, fil
 }
 
 
-aggiungiProdotti()
