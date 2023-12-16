@@ -1,3 +1,7 @@
+
+
+
+
 let listaImmagini = ["./image/abbigliamentoDonna.jpeg", "./image/abbigliamentoUomo.jpg", "./image/elettronica.webp", "./image/Gioielli.webp"];
 let presentationP = [""]
 let img = document.getElementById("presentationImage");
@@ -64,7 +68,7 @@ async function settaStyle(oggetti) {
 };
 
 
-cicloImmagine();
+
 
 
 
@@ -169,7 +173,8 @@ function filtraCatalogo() {
 window.addEventListener("load", (event) => {
 
     if (window.location.href.includes("landingPage.html")) {
-        console.log("Sto caricando la pagina")
+        console.log("Sto caricando la pagina");
+        cicloImmagine();
     };
 
     if (window.location.href.includes("catalogo.html")) {
