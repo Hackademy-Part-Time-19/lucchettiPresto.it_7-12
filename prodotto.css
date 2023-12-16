@@ -1,3 +1,7 @@
+body {
+    background-color: #171717;
+}
+
 @font-face {
     font-family: 'myfont1';
     src: url(./Lora/Lora-VariableFont_wght.ttf);
@@ -5,12 +9,12 @@
 
 
 @keyframes animazioneMia {
-  0%{ opacity: 0;}
-
-  50%{opacity: 1;}
-
-  100%{opacity: 0;}
-}
+    0%{ opacity: 0;}
+  
+    50%{opacity: 1;}
+  
+    100%{opacity: 0;}
+  }
 
 * {
     padding: 0px;
@@ -18,14 +22,11 @@
     color: white;
 }
 
-body {
-    background-color: #171717;
-}
-
-
 h1 {
     font-weight: 900;
 }
+
+
 
 
 @media screen and (max-width: 800px) {
@@ -81,6 +82,7 @@ h1 {
 
 }
 
+
 /* SEZIONE BARRA DI NAVIGAZIONE   */
 
 .barraDiNavigazione {
@@ -125,127 +127,6 @@ h1 {
     justify-content: center;
 
 }
-
-
-
-
-
-/*    ||||   SEZIONE PRODOTTI   ||||   */
-
-
-
-.testo-centrale {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: white;
-    width: 100%;
-}
-
-
-
-.divCatalogo {
-    margin-top: 50px;
-
-}
-
-.container-card {
-    padding: 10px;
-    margin-top: 20px;
-
-}
-
-.card-prodotto {
-    height: 70vh;
-    cursor: pointer;
-    background-color: #505050;
-    border-radius: 30px;
-    padding: 20px;
-    position: relative;
-
-
-
-}
-
-
-
-.card-vuota {
-    height: 70vh;
-    cursor: pointer;
-    background-color: #505050;
-    border-radius: 30px;
-    padding: 20px;
-    position: relative;
-    
-    animation: animazioneMia infinite 1.5s ;
-}
-
-.container-immagine-prodotto {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
-
-.container-testo-prodotto {
-    height: 110px;
-    margin-top: 15px;
-    font-size: 18px;
-    margin-left: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-
-.img-prodotto {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-
-}
-
-
-.container-button-prodotto {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(218, 0, 55, 0.7);
-}
-
-.button-compra {
-    width: 150px;
-    height: 40px;
-    background-color: #DA0037;
-    font-weight: 600;
-    transition: ease-in 0.3s;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 13px;
-    cursor: pointer;
-    margin-top: 20px;
-
-
-}
-
-.button-compra:hover {
-    scale: 1.03;
-    background-color: #730923;
-}
-
 
 /* SEZIONE PULSANTI   */
 
@@ -359,40 +240,127 @@ h1 {
 }
 
 
-/* SEZIONE BOTTONI FILTRA E ORDINA    */
 
-.sezioneBottoniFiltra {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 30px;
-}
 
-.buttonFilterPrezzo {
-    width: 100px;
-    height: 40px;
-    background-color: #DA0037;
-    margin-right: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* |||||||||| SEZIONE PRODOTTO ||||||||||*/
+
+
+.containerProdotto {
+    margin-top: 200px;
+    background-color: #303030;
+    margin-bottom: 30px;
 }
 
 
-.buttonFilterNome {
-    width: 100px;
-    height: 40px;
-    background-color: #DA0037;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
+.containerImmagineProdotto {
+    border-right: 2px solid rgba(218, 0, 55, 0.3);
+    padding: 30px;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.immagineProdotto {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.containerDescrizioneProdotto {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.title {
+    flex: 2;
     text-align: center;
-    margin-right: 10px;
+    border-bottom: 2px solid rgba(218, 0, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleProduct {
+    margin-top: 20px;
+    margin-left: 20px;
+
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.description {
+    flex: 5;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-bottom: 2px solid rgba(218, 0, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descrizioneProduct {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+
+
+}
+
+.price {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prezzoProduct {
+    margin-top: 20px;
+    margin-right: 20px;
+
+
+}
+
+
+
+.divButtonCompra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border-top: 2px solid rgba(218, 0, 55, 0.3);
+}
+
+.button-compra {
+    width: 150px;
+    height: 40px;
+    background-color: #DA0037;
+    font-weight: 600;
+    transition: ease-in 0.3s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 13px;
+    cursor: pointer;
+    margin-top: 20px;
+
+
+}
+
+
+.button-compra:hover {
+    scale: 1.03;
+    background-color: #730923;
+}
+
+
+.container-vuoto{
+    animation: animazioneMia infinite 1.5s;
+    background-color: #272727;
 }
