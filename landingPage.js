@@ -2,7 +2,7 @@
 
 
 
-let listaImmagini = ["./image/abbigliamentoDonna.jpeg", "./image/abbigliamentoUomo.jpg", "./image/elettronica.webp", "./image/Gioielli.webp"];
+let listaImmagini = ["./image/abbigliamentoDonna.jpeg", "./image/abbigliamentoUomo.jpg", "./image/elettronica.webp"];
 let presentationP = [""]
 let img = document.getElementById("presentationImage");
 let index = 0
@@ -248,7 +248,7 @@ function aggiungiSingoloProdotto(id) {
             </div>
         </div>`
 
-           
+
         }).catch(error => {
             console.log(error)
         })
@@ -267,3 +267,94 @@ function bordiImmagineNone(numeroImmagine) {
 }
 
 
+
+
+/* |||||||| EVENTO DI SCROLL ||||||| */
+
+/*
+
+document.addEventListener("scroll", function () {
+    
+    //ottieni la posizioneCorrente
+    let scrollTop = document.documentElement.scrollTop;
+    let totalePaginaInPixel = document.documentElement.scrollHeight
+    let altezzaInPixelDispositivoCorrente = document.documentElement.clientHeight
+    let posizioneCorrente = scrollTop;
+    
+    //percentualeDiScroll
+    let scrollPercentage = (posizioneCorrente / (totalePaginaInPixel - altezzaInPixelDispositivoCorrente)) * 100;
+ 
+    //a che pixel inizia il div area1
+    let area1OffsetTop = area1.offsetTop;
+    //a che pixel finisce il div area1
+    let area1Height = area1.offsetTop + area1.offsetHeight;
+ 
+    let area2OffsetTop = area2.offsetTop;
+    let area2Height = area2.offsetTop + area2.offsetHeight;
+
+   let area3OffsetTop = area3.offsetTop;
+    let area3Height = area3.offsetTop + area3.offsetHeight;
+ 
+    //è vero che la posizione corrente è contenuta tra l'inzio e la fine?
+    if (scrollTop > area1OffsetTop && scrollTop < area1Height) {
+        area1.style.backgroundColor = "orange"
+    } else {
+        area1.style.backgroundColor = "white"
+    }
+    if (scrollTop > area2OffsetTop && scrollTop < area2Height) {
+        area2.style.backgroundColor = "violet"
+    } else {
+        area2.style.backgroundColor = "white"
+    }
+    
+})
+*/
+
+
+
+
+/* SEZIONE REGISTRAZIONE.HTML */
+
+function registrati() {
+
+    let eMail = document.getElementById("inputEmail").value;
+    let nome = document.getElementById("inputNome").value;
+    let cognome = document.getElementById("inputCognome").value;
+    let telefono = document.getElementById("inputTelefono").value;
+    let password = document.getElementById("inputPassword").value;
+    let indirizzoCompleto = document.getElementById("inputIndirizzo").value;
+
+
+
+    fetch('https://dummyjson.com/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+
+            username: 'kminchelle',
+            password: '0lelplR',
+            /*
+            username: eMail,
+            password: password,*/
+            // expiresInMins: 60, // optional
+        })
+    })
+        .then(res => res.json())
+        .then((data)=>{
+            console.log("Messaggio del server " + data?.message);
+
+            if(data?.message != null) {
+                console.log("autenticazione fallita")
+                document.getElementById("erroreAutenticazione").style.display="block"
+            } else{
+                window.location.href = "home.html";
+
+
+                localStorage.setItem("userToken", data.token)
+            }
+        });
+
+    console.log(eMail, nome, cognome, telefono, password, indirizzoCompleto)
+
+
+}
